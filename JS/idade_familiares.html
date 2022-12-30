@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() { //Função criada para pula linha, sempre que empregada no código ao escrever pulaLinha(), uma linha será pulada
+    document.write("<br>");
+}
+
+function mostra(frase) { //Função criada para escrever algo na tela, como já foi definido que document.write escreve o que está dentro do parênteses, basta escrever mostra(o que desejar escrever) que será exibido
+    document.write(frase);
+    pulaLinha();//Função dentro de uma função pode ser executada, porém, após a função mostra() ser executada, ele SEMPRE pulará uma linha
+}
+
+var totalFamiliares = parseInt(prompt("Digite a quantidade de familiares"));
+var numero = 1;
+var totalIdades = 0;//Se colocamos essa variável dentro do While, ele vai acumular a primeira quantidade de idade, depois, ele vai zerar pois estará se repetindo dentro do while até que o while pare.
+
+while (numero <= totalFamiliares) {
+    var idade = parseInt(prompt("Informe idade do familiar"));
+    totalIdades = totalIdades + idade;
+    numero++;
+}
+var mediaDasidades = totalIdades / totalFamiliares;
+
+mostra("A media de idade dos seus familiares é: " + mediaDasidades);
+
+mostra("FIM");
+</script>

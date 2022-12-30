@@ -1,0 +1,26 @@
+<canvas width = '600' height = '400'></canvas> 
+
+<script>
+    var tela = document.querySelector('canvas'); //Variável criada para "pegar" o elemento que usaremos como tela e trazemos ela para o JS
+    var pincel = tela.getContext('2d'); //Variável declarada para dizer que estamos lidando com algo em 2 dimensões
+
+    pincel.fillStyle = 'pink'; //Neste caso, estamos "definindo propriedades" da variável, fillStyle serve para dizer que vamos preencher com a cor tal o espaço a ser designado
+    pincel.fillRect(0, 0, 600, 400)//Estou dizendo aqui para que a minha variável pincel, preencha meu retângulo, no fillRect, começando do ponto zero da coordenada X (horizontal) e do ponto zero da coordenada y (vertical), lembrando que não posso preencher mais do que defini no canvas lá em cima, sendo 600 de largura por 400 de altura
+    
+    pincel.fillStyle = ('red');
+    pincel.beginPath(); //Função que serve para dizer onde começa o caminho de onde será a próxima forma/desenho
+    pincel.moveTo(300, 350);//Função que diz pra onde o caminho deve ir, aqui serve como ponto de partida para o desenho
+    pincel.lineTo(200, 200); //Função que para traçar uma linha até o ponto que deseja ir com a forma/desenho
+    pincel.lineTo(400, 200);
+    pincel.fill(); //Função que serve para preencher o espaço previamente delimitado
+
+    pincel.fillStyle = 'red';
+    pincel.beginPath();//Usar sempre que for desenhar uma nova forma
+    pincel.arc(250, 180, 55, 0, 2 * 3.14);//Função usada para desenhar círculos
+    pincel.fill();
+
+    pincel.fillStyle = 'red';
+    pincel.beginPath();//Usar sempre que for desenhar uma nova forma
+    pincel.arc(350, 180, 55, 0, 2 * 3.14);//Função usada para desenhar círculos
+    pincel.fill();
+</script>

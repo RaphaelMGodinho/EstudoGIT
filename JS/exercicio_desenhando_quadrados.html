@@ -1,0 +1,32 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    function desenhaQuadradoVerde(x, y, cor) {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.fillStroke = 'black'; //Este comando serve para pintar a borda do quadrado da cor designada
+        pincel.strokeRect(x, y, 50, 50);
+    }
+
+   /* var x = 0;
+
+    while(x < 600) {
+    desenhaQuadradoVerde(x, 0, 'blue');//Como colocamos na nossa função que recebe x e y e a "variável" cor, nós colocamos qual o valor de x, y e a cor ao chamar a função para desenhar onde vai o quadrado
+    desenhaQuadradoVerde(x, 50, 'red');
+    desenhaQuadradoVerde(x, 100, 'yellow');
+    x = x + 50;
+    } //Neste código, eu peço para ele desenhar 
+    */
+
+    for (var x = 0; x < 600; x = x + 50 ) {
+
+        desenhaQuadradoVerde(x, 0, 'green');
+
+        //Este for é feito para que coloque quadrados verdes um do lado do outro até que conclua o espaço do width
+    }
+</script>
