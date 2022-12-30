@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+    var limite = parseInt(prompt("Entre com a data limite"));
+    var anoCopa = 1930;
+
+    while(anoCopa <= limite) { //While significa que enquanto tal coisa é verdadeira, tal coisa acontece, (while(true) {Tal coisa}) CUIDADO AO MANTER WHILE TRUE POIS ELE EXECUTARÁ INFINITAMENTE
+        mostra("Teve Copa em " + anoCopa); //Dá o alerta do ano que teve Copa
+        anoCopa = anoCopa + 4; //Troca o último resultado do anoCopa pelo mesmo número adicionado 4
+    }
+
+    mostra("FIM");
+
+</script>
